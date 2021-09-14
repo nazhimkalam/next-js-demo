@@ -11,7 +11,15 @@ export default function Home({ data }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1>Create Next App</h1>
+      <div>
+        <Image
+          src="https://cdn.worldvectorlogo.com/logos/next-js.svg"
+          alt="avatar"
+          height={80}
+          width={80}
+        />
+      </div>
+
       <main>
         {data.map((item, key) => (
           <div key={key}>
@@ -45,9 +53,6 @@ export async function getStaticProps() {
 }
 
 const Container = styled.div`
-  > h1 {
-    text-align: center;
-  }
   > main {
     display: flex;
     align-items: center;
@@ -59,5 +64,11 @@ const Container = styled.div`
       margin: 1pc;
       width: 250px;
     }
+  }
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1pc;
   }
 `;
